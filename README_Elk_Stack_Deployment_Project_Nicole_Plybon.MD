@@ -271,7 +271,7 @@ CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS       
                                                                                     0.0.0.0:9200->9200/tcp, 9300/tcp 
 RedFive@ELK-SERVER:~$
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/sudo docker ps.png) 
+![](Images/sudo docker ps.png) 
 
 
 # Identity and Access Management ###
