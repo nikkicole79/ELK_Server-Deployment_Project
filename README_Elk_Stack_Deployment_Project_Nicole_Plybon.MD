@@ -16,7 +16,7 @@ This document contains the following details:
 
 
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/ELK_Stack_Deployment_Diagram_Topology_Project.png)
+![](Images/ELK_Stack_Deployment_Diagram_Project.PNG)
 ![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the 
@@ -30,7 +30,7 @@ certain pieces of it, such as Filebeat.  Here is an example of the filebeat-play
 
 # Description of the Topology ###
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/ELK_Stack_Deployment_Diagram_Topology_Project.png)
+![](Images/ELK_Stack_Deployment_Diagram_Project.
 ![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=shar
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
