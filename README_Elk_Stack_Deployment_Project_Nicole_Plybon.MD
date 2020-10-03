@@ -228,7 +228,6 @@ sudo dpkg -i filebeat-7.6.1-amd64.deb
 
 ![](Images/curl.PNG)
 
-
   - Once the file is on the ansible container, edit the host IP under the Elasticsearch output and Kibana
 
 ![](Ansible/filebeat-configuration.yml)
@@ -237,7 +236,6 @@ root@b2ba789660ad:/etc/ansible# nano filebeat-config.yml
 
 ![](Images/outputfilebeatconfig.PNG)
 ![](Images/kibanafilebeatconfig.PNG)
-
 
 Create the Filebeat Installation Playbook.  The playbook implements the following tasks:
   -Download the .deb file from artifacts.elastic.co.
@@ -260,62 +258,13 @@ root@b2ba789660ad:/etc/ansible# nano filebeat-playbook.yml
 
 root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
 
-PLAY [Installing and Launch Filebeat] ************************************************************
+![](Images/ansibleplaybookoutput.PNG)
 
-TASK [Gathering Facts] ***************************************************************************
-ok: [10.0.0.8]
-ok: [10.0.0.5]
-ok: [10.0.0.6]
-
-TASK [Download filebeat .deb file] ***************************************************************
-[WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to
-use command because get_url or uri is insufficient you can add 'warn: false' to this command task
-or set 'command_warnings=False' in ansible.cfg to get rid of this message.
-
-changed: [10.0.0.6]
-changed: [10.0.0.8]
-changed: [10.0.0.5]
-
-TASK [Install filebeat .deb] *********************************************************************
-changed: [10.0.0.6]
-changed: [10.0.0.5]
-changed: [10.0.0.8]
-
-TASK [Drop in filebeat.yml] **********************************************************************
-ok: [10.0.0.6]
-ok: [10.0.0.8]
-ok: [10.0.0.5]
-
-TASK [Enable and Configure System Module] ********************************************************
-changed: [10.0.0.5]
-changed: [10.0.0.8]
-changed: [10.0.0.6]
-
-TASK [Setup filebeat] ****************************************************************************
-changed: [10.0.0.5]
-changed: [10.0.0.8]
-changed: [10.0.0.6]
-
-TASK [Start filebeat service] ********************************************************************
-[WARNING]: Consider using the service module rather than running 'service'.  If you need to use
-command because service is insufficient you can add 'warn: false' to this command task or set
-'command_warnings=False' in ansible.cfg to get rid of this message.
-
-changed: [10.0.0.6]
-changed: [10.0.0.5]
-changed: [10.0.0.8]
-
-PLAY RECAP ***************************************************************************************
-10.0.0.5                   : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-10.0.0.6                   : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-10.0.0.8                   : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-
-  - ELK Stack should be recieving logs.  Navigate to the Filebeat installation page on the ELK server GUI
-    - Under Logs, click add Log data button
-    - Click on System logs 
-    - Under Module Status section and click Check Data
-    - Scroll to the bottom and click on Verify Incoming Data
-    - If the ELK Stack was successful you will see the recieving logs
+- Click the Log Data button 
+- Click on the system logs
+- Under Module Status section and Click Check Data
+- Scroll to the bottom and click on Verify Incoming Data
+- If the ELK Stack was successful you will see the recieving logs
 
 ![](Images/Kibana_Check_Data_logs.PNG)
 
