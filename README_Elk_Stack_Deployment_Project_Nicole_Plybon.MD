@@ -178,12 +178,12 @@ Create an Ansible playbook that
 
 ![](ELKplaybook.yml)
 
-![](ELKplaybook.yml.PNG)
+![](Images/ELKplaybook.yml.PNG)
 
   -The Ansible output should resemble the output below and not contain any errors:
   -root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
 
-![](ELKplaybookoutput.PNG)
+![](Images/ELKplaybookoutput.PNG)
 
 After the ELK container is installed SSH to the container to verify the ELK container is running.
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
