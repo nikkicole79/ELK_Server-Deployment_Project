@@ -254,7 +254,8 @@ Create the Filebeat Installation Playbook.  The playbook implements the followin
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-playbook.yml
 
-![](Ansible/Filebeat-Playbook.yml)
+- Filebeat-Playbook.yml)
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
 
   - Once the host IP address has been updated into the filebeat-config.yml file run the Ansible Playbook
 
