@@ -15,12 +15,8 @@ This document contains the following details:
 - Target Machines & Beats
 
 
-
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/ELK_Stack_Deployment_Diagram_Topology_Project.png)
-![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing
-
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the 
-entire deployment pictured above. Alternatively, select portions of the Filebeat-Playbook.yml file may be used to install only 
+entire deployment pictured below. Alternatively, select portions of the Filebeat-Playbook.yml file may be used to install only 
 certain pieces of it, such as Filebeat.  Here is an example of the filebeat-playbook.yml used within this ELK Stack Deployement.
 
 - Filebeat-Playbook.yml
@@ -30,8 +26,8 @@ certain pieces of it, such as Filebeat.  Here is an example of the filebeat-play
 
 # Description of the Topology ###
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/ELK_Stack_Deployment_Diagram_Topology_Project.png)
-![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=shar
+![](Images/ELK_Stack_Deployment_Diagram_Project.PNG)
+![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
@@ -180,91 +176,13 @@ Create an Ansible playbook that
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
     - ELKplaybook.yml file noted below l
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/ELKplaybook.yml)
-
-
----
-- name: Configure Elk VM with Docker
-  hosts: elkservers
-  remote_user: sysadmin
-  become: true
-  tasks:
-    #### Use apt module
-    - name: Install docker.io
-      apt:
-        update_cache: yes
-        force_apt_get: yes
-        name: docker.io
-        state: present
-
-      #### Use apt module
-    - name: Install python3-pip
-      apt:
-        force_apt_get: yes
-        name: python3-pip
-        state: present
-
-      #### Use pip module (It will default to pip3)
-    - name: Install Docker module
-      pip:
-        name: docker
-        state: present
-
-      #### Use command module
-    - name: Increase virtual memory
-      command: sysctl -w vm.max_map_count=262144
-
-      #### Use sysctl module
-    - name: Use more memory
-      sysctl:
-        name: vm.max_map_count
-        value: '262144'
-        state: present
-        reload: yes
-
-      #### Use docker_container module
-    - name: download and launch a docker elk container
-      docker_container:
-        name: elk
-        image: sebp/elk:761
-        state: started
-        restart_policy: always
-        # Please list the ports that ELK runs on
-        published_ports:
-          - 5601:5601
-          - 9200:9200
-          - 5044:5044
-
+![](ELKplaybook.yml)
+![](Images/ELKplaybook.yml.PNG)
 
   -The Ansible output should resemble the output below and not contain any errors:
   -root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
 
-PLAY [Configure Elk VM with Docker] ********************************************
-
-TASK [Gathering Facts] *********************************************************
-ok: [10.1.0.4]
-
-TASK [Install docker.io] *******************************************************
-ok: [10.1.0.4]
-
-TASK [Install python3-pip] *****************************************************
-ok: [10.1.0.4]
-
-TASK [Install Docker module] ***************************************************
-ok: [10.1.0.4]
-
-TASK [Increase virtual memory] *************************************************
-changed: [10.1.0.4]
-
-TASK [Use more memory] *********************************************************
-ok: [10.1.0.4]
-
-TASK [download and launch a docker elk container] ******************************
-ok: [10.1.0.4]
-
-PLAY RECAP *********************************************************************
-10.1.0.4  : ok=7    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-
+![](Images/ELKplaybookoutput.PNG)
 
 After the ELK container is installed SSH to the container to verify the ELK container is running.
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -275,14 +193,14 @@ CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS       
                                                                                     0.0.0.0:9200->9200/tcp, 9300/tcp 
 RedFive@ELK-SERVER:~$
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/sudo docker ps.png) 
+![](Images/sudo%20docker%20ps.png) 
 
 
 # Identity and Access Management ###
 
 After verify the ELK container is running you should be able to connect to the webpage.  This ELK web serve runs on port 5601 
 
-![](ELK-StaDocuments/GitHub/ELK_Server-Deployment-Project/Images/KibanaWebpage.PNG)
+![](Images/KibanaWebpage.PNG)
 
   - Load the ELK stack server from the browser at http://[your.VM.IP]:5601/app/kibana
 
@@ -424,7 +342,7 @@ PLAY RECAP *********************************************************************
     - Scroll to the bottom and click on Verify Incoming Data
     - If the ELK Stack was successful you will see the recieving logs
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/Kibana_Check_Data_logs.PNG)
+![](Images/Kibana_Check_Data_logs.PNG)
 
 
 
