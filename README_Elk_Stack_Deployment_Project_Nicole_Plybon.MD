@@ -148,7 +148,7 @@ Create an Ansible playbook that
       - Update the IP addresses under Example #2. 
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/hosts_file.MD)
+![](Ansible/hosts_file.MD)
 
 
  This is the default ansible 'hosts' file.
@@ -176,7 +176,7 @@ Create an Ansible playbook that
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
     - ELKplaybook.yml file noted below l
 
-![](ELKplaybook.yml)
+![](Ansible/ELKplaybook.yml)
 ![](Images/ELKplaybook.yml.PNG)
 
   -The Ansible output should resemble the output below and not contain any errors:
@@ -188,10 +188,6 @@ After the ELK container is installed SSH to the container to verify the ELK cont
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 RedFive@ELK-SERVER:~$ sudo docker ps
-CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS       PORTS                                          NAMES
-38afce9c2156  sebp/elk:761  "/usr/local/bin/star…"  5 minutes ago  Up 5 minutes 0.0.0.0:5044->5044/tcp, 0.0.0.0:5601->5601/tcp,   elk
-                                                                                    0.0.0.0:9200->9200/tcp, 9300/tcp 
-RedFive@ELK-SERVER:~$
 
 ![](Images/sudo%20docker%20ps.png) 
 
@@ -207,13 +203,10 @@ After verify the ELK container is running you should be able to connect to the w
 In the event you do not see the Kibana / ELK server landing page ensure to SSH into the ELK sever to start and verify it's running.
 
 RedFive@ELK-SERVER:~$ sudo docker container list -a
-CONTAINER ID        IMAGE               COMMAND                  CREATED         STATUS             PORTS                                                                              NAMES
-38afce9c2156        sebp/elk:761        "/usr/local/bin/star…"   7 days ago      Up 28 minutes      0.0.0.0:5044->5044/tcp, 
-                                                                                                    0.0.0.0:5601->5601/tcp, 
-                                                                                                    0.0.0.0:9200->9200/tcp, 9300/tcp elk
 
 RedFive@ELK-SERVER:~$ sudo docker start elk
-elk
+
+![](Images/sudostartelk.PNG)
 
 
 # Beats in Use ###
@@ -239,7 +232,7 @@ eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml
 
   - Once the file is on the ansible container, edit the host IP under the Elasticsearch output and Kibana
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/filebeat-configuration.yml)
+![](Ansible/filebeat-configuration.yml)
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-config.yml
 
@@ -277,7 +270,7 @@ Create the Filebeat Installation Playbook.  The playbook implements the followin
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-playbook.yml
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/filebeat-playbook.yml)
+![](Ansible/Filebeat-Playbook.yml)
 
   - Once the host IP address has been updated into the filebeat-config.yml file run the Ansible Playbook
 
