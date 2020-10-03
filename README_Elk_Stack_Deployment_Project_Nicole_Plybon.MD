@@ -420,7 +420,7 @@ PLAY RECAP *********************************************************************
     - Scroll to the bottom and click on Verify Incoming Data
     - If the ELK Stack was successful you will see the recieving logs
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/Images/Kibana_Check_Data_logs.PNG)
+![](Images/Kibana_Check_Data_logs.PNG)
 
 
 
