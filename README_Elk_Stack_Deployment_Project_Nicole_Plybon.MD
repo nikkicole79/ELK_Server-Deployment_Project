@@ -235,30 +235,30 @@ Create an Ansible playbook that
   -The Ansible output should resemble the output below and not contain any errors:
   -root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
 
-PLAY [Configure Elk VM with Docker] ********************************************
+PLAY [Configure Elk VM with Docker] *
 
-TASK [Gathering Facts] *********************************************************
+TASK [Gathering Facts] *
 ok: [10.1.0.4]
 
-TASK [Install docker.io] *******************************************************
+TASK [Install docker.io] *
 ok: [10.1.0.4]
 
-TASK [Install python3-pip] *****************************************************
+TASK [Install python3-pip] *
 ok: [10.1.0.4]
 
-TASK [Install Docker module] ***************************************************
+TASK [Install Docker module] *
 ok: [10.1.0.4]
 
-TASK [Increase virtual memory] *************************************************
+TASK [Increase virtual memory] *
 changed: [10.1.0.4]
 
-TASK [Use more memory] *********************************************************
+TASK [Use more memory] *
 ok: [10.1.0.4]
 
-TASK [download and launch a docker elk container] ******************************
+TASK [download and launch a docker elk container] *
 ok: [10.1.0.4]
 
-PLAY RECAP *********************************************************************
+PLAY RECAP *
 10.1.0.4  : ok=7    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
 
@@ -278,7 +278,7 @@ RedFive@ELK-SERVER:~$
 
 After verify the ELK container is running you should be able to connect to the webpage.  This ELK web serve runs on port 5601 
 
-![](ELK-StaDocuments/GitHub/ELK_Server-Deployment-Project/Images/KibanaWebpage.PNG)
+![](Images/KibanaWebpage.PNG)
 
   - Load the ELK stack server from the browser at http://[your.VM.IP]:5601/app/kibana
 
