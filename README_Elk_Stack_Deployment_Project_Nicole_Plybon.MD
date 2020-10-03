@@ -207,6 +207,7 @@ After verify the ELK container is running you should be able to connect to the w
 In the event you do not see the Kibana / ELK server landing page ensure to SSH into the ELK sever to start and verify it's running.
 
 RedFive@ELK-SERVER:~$ sudo docker container list -a
+
 CONTAINER ID        IMAGE               COMMAND                  CREATED         STATUS             PORTS                                                                              NAMES
 38afce9c2156        sebp/elk:761        "/usr/local/bin/star…"   7 days ago      Up 28 minutes      0.0.0.0:5044->5044/tcp, 
                                                                                                     0.0.0.0:5601->5601/tcp, 
