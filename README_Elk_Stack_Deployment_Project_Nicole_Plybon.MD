@@ -239,7 +239,7 @@ eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml
 
   - Once the file is on the ansible container, edit the host IP under the Elasticsearch output and Kibana
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/filebeat-configuration.yml)
+![](Documents/GitHub/ELK_Server-Deployment-Project/filebeat-configuration.yml) 
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-config.yml
 
@@ -277,7 +277,7 @@ Create the Filebeat Installation Playbook.  The playbook implements the followin
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-playbook.yml
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/filebeat-playbook.yml)
+![](Ansible/Filebeat-Playbook.yml)
 
   - Once the host IP address has been updated into the filebeat-config.yml file run the Ansible Playbook
 
