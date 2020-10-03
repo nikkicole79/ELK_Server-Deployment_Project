@@ -149,6 +149,7 @@ Create an Ansible playbook that
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
 
 ![](Ansible/hosts_file.MD)
+Ansible/hosts_file.MD
 
 
  This is the default ansible 'hosts' file.
@@ -176,8 +177,11 @@ Create an Ansible playbook that
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
     - ELKplaybook.yml file noted below l
 
-![](Ansible/ELKplaybook.yml)
+ELKplaybook.yml
+
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
 ![](Images/ELKplaybook.yml.PNG)
+
 
   -The Ansible output should resemble the output below and not contain any errors:
   -root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
@@ -250,7 +254,9 @@ Create the Filebeat Installation Playbook.  The playbook implements the followin
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-playbook.yml
 
-![](Ansible/Filebeat-Playbook.yml)
+- Filebeat-Playbook.yml
+
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
 
   - Once the host IP address has been updated into the filebeat-config.yml file run the Ansible Playbook
 
@@ -322,5 +328,4 @@ The easiest way to copy the playbooks is to use Git:
   $ ansible-playbook install_metricbeat.yml webservers
 
 -To verify success, wait five minutes to give ELK time to start up.
--Then, run: curl http://[ELK VM IP]:5601. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console.
-
+-Then, run: curl http://[ELK VM IP]:5601. This is the address of Kibana. If the installation succeeded, this command should print HTML to the consol
