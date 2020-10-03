@@ -149,8 +149,8 @@ Create an Ansible playbook that
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
 
 - hosts_file.MD
-![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD
 
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD
 
 
  This is the default ansible 'hosts' file.
@@ -235,7 +235,9 @@ sudo dpkg -i filebeat-7.6.1-amd64.deb
 
   - Once the file is on the ansible container, edit the host IP under the Elasticsearch output and Kibana
 
-![](Ansible/filebeat-configuration.yml)
+- filebeat-configuration.yml
+
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/filebeat-configuration.yml
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-config.yml
 
