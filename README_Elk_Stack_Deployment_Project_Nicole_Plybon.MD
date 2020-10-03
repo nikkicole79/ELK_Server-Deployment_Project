@@ -176,7 +176,7 @@ Create an Ansible playbook that
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
     - ELKplaybook.yml file noted below l
 
-![](ELKplaybook.yml)
+![](Ansible/ELKplaybook.yml)
 ![](Images/ELKplaybook.yml.PNG)
 
   -The Ansible output should resemble the output below and not contain any errors:
