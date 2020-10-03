@@ -223,11 +223,10 @@ Install Filebest on the DVWA Virtual Machine:
 	- SSH into the Ansible Container
         - Using curl is a better way to avoid errors and prevents corrupts configuration file
 
-root@6160a9be360e:/etc/ansible# curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/
-eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml
- % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                Dload  Upload   Total   Spent    Left  Speed
-100 73112  100 73112    0     0   964k      0 --:--:-- --:--:-- --:--:--  964k
+root@6160a9be360e:/etc/ansible# curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+sudo dpkg -i filebeat-7.6.1-amd64.deb
+
+![](Images/curl.PNG)
 
 
   - Once the file is on the ansible container, edit the host IP under the Elasticsearch output and Kibana
@@ -236,25 +235,8 @@ eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-config.yml
 
--------------------------- Elasticsearch output -------------------------------
-output.elasticsearch:
-  Boolean flag to enable or disable the output module.
-  enabled: true
-
-   Array of hosts to connect to.
-   Scheme and port can be left out and will be set to the default (http and 9200)
-   In case you specify and additional path, the scheme is required: http://localhost:9200/path
-   IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
-  hosts: ["10.1.0.4:9200"]
-  username: "elastic"
-  password: "changeme"
-
-============================== Kibana =====================================
-
- Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
- This requires a Kibana endpoint configuration.
-setup.kibana:
-  host: "10.1.0.4:5601"
+![](Images/outputfilebeatconfig.PNG)
+![](Images/kibanafilebeatconfig.PNG)
 
 
 Create the Filebeat Installation Playbook.  The playbook implements the following tasks:
