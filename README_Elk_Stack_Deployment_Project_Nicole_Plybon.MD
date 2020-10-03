@@ -177,7 +177,8 @@ Ansible/hosts_file.MD
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
     - ELKplaybook.yml file noted below l
 
-ELKplaybook.yml)
+ELKplaybook.yml
+
 ![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
 ![](Images/ELKplaybook.yml.PNG)
 
