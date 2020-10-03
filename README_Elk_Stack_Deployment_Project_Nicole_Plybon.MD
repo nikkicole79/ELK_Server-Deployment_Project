@@ -204,13 +204,9 @@ In the event you do not see the Kibana / ELK server landing page ensure to SSH i
 
 RedFive@ELK-SERVER:~$ sudo docker container list -a
 
-CONTAINER ID        IMAGE               COMMAND                  CREATED         STATUS             PORTS                                                                              NAMES
-38afce9c2156        sebp/elk:761        "/usr/local/bin/star…"   7 days ago      Up 28 minutes      0.0.0.0:5044->5044/tcp, 
-                                                                                                    0.0.0.0:5601->5601/tcp, 
-                                                                                                    0.0.0.0:9200->9200/tcp, 9300/tcp elk
-
 RedFive@ELK-SERVER:~$ sudo docker start elk
-elk
+
+![](Images/sudostartelk.PNG)
 
 
 # Beats in Use ###
