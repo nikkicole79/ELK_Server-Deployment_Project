@@ -156,16 +156,9 @@ Ansible/hosts_file.MD
 
  It should live in /etc/ansible/hosts
 
- Ex 2: A collection of hosts belonging to the 'webservers' group
- [webservers]
- alpha.example.org
- beta.example.org
- 192.168.1.100
- 192.168.1.110
- 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
- 10.0.0.8 ansible_python_interpreter=/usr/bin/python3
-
+ Under Ex 2 section update the hosts belonging to the 'webservers' group
+ 
+![](Images/hostfilescreenshot.PNG)
 
 # Launching and Exposing the Container ###
   * sudo docker start [container]
