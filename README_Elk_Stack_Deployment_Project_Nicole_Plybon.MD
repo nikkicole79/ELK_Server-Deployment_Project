@@ -148,7 +148,7 @@ Create an Ansible playbook that
       - Update the IP addresses under Example #2. 
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/hosts_file.MD)
+![](Ansible/hosts_file.MD)
 
 
  This is the default ansible 'hosts' file.
