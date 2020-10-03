@@ -176,7 +176,7 @@ Create an Ansible playbook that
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
     - ELKplaybook.yml file noted below l
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/ELKplaybook.yml)
+![](ELKplaybook.yml)
 
 
 ---
@@ -271,7 +271,7 @@ CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS       
                                                                                     0.0.0.0:9200->9200/tcp, 9300/tcp 
 RedFive@ELK-SERVER:~$
 
-![](Images/sudo docker ps.png) 
+![](Images/sudo%20docker%20ps.png) 
 
 
 # Identity and Access Management ###
