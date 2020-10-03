@@ -188,10 +188,6 @@ After the ELK container is installed SSH to the container to verify the ELK cont
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 RedFive@ELK-SERVER:~$ sudo docker ps
-CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS       PORTS                                          NAMES
-38afce9c2156  sebp/elk:761  "/usr/local/bin/star…"  5 minutes ago  Up 5 minutes 0.0.0.0:5044->5044/tcp, 0.0.0.0:5601->5601/tcp,   elk
-                                                                                    0.0.0.0:9200->9200/tcp, 9300/tcp 
-RedFive@ELK-SERVER:~$
 
 ![](Images/sudo%20docker%20ps.png) 
 
