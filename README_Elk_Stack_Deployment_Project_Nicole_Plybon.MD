@@ -147,16 +147,21 @@ Create an Ansible playbook that
       - Add the new VM to the Ansible hosts file 
       - Update the IP addresses under Example #2. 
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
+        - 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+	- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+        - 10.0.0.8 ansible_python_interpreter=/usr/bin/python3
 
-![](Ansible/hosts_file.MD)
-Ansible/hosts_file.MD
+https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
+
+![]hosts_file.MD
 
 
- This is the default ansible 'hosts' file.
+- This is the default ansible 'hosts' file.
 
- It should live in /etc/ansible/hosts
+   -It should live in /etc/ansible/hosts
 
- Under Ex 2 section update the hosts belonging to the 'webservers' group
+   - Under Ex 2 section update the hosts belonging to the 'webservers' group
+   	- Configuration in this example add 3 web server IP addresses
  
 ![](Images/hostfilescreenshot.PNG)
 
