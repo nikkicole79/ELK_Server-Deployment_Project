@@ -177,7 +177,6 @@ Create an Ansible playbook that
     - ELKplaybook.yml file noted below l
 
 ![](ELKplaybook.yml)
-
 ![](Images/ELKplaybook.yml.PNG)
 
   -The Ansible output should resemble the output below and not contain any errors:
