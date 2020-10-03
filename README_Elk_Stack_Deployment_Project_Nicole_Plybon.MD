@@ -177,8 +177,10 @@ Ansible/hosts_file.MD
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
     - ELKplaybook.yml file noted below l
 
-![](Ansible/ELKplaybook.yml)
+ELKplaybook.yml)
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
 ![](Images/ELKplaybook.yml.PNG)
+
 
   -The Ansible output should resemble the output below and not contain any errors:
   -root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
