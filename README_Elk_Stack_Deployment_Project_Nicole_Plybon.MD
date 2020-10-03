@@ -15,12 +15,8 @@ This document contains the following details:
 - Target Machines & Beats
 
 
-
-![](Images/ELK_Stack_Deployment_Diagram_Project.PNG)
-![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing
-
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the 
-entire deployment pictured above. Alternatively, select portions of the Filebeat-Playbook.yml file may be used to install only 
+entire deployment pictured below. Alternatively, select portions of the Filebeat-Playbook.yml file may be used to install only 
 certain pieces of it, such as Filebeat.  Here is an example of the filebeat-playbook.yml used within this ELK Stack Deployement.
 
 - Filebeat-Playbook.yml
@@ -30,8 +26,8 @@ certain pieces of it, such as Filebeat.  Here is an example of the filebeat-play
 
 # Description of the Topology ###
 
-![](Images/ELK_Stack_Deployment_Diagram_Project.
-![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=shar
+![](Images/ELK_Stack_Deployment_Diagram_Project.PNG)
+![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
