@@ -148,19 +148,20 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
   * root@b2ba789660ad:/etc/ansible# nano hosts
       - Add the new VM to the Ansible hosts file 
       - Update the IP addresses under Example #2. 
-      - Below is the Ex 2 section where the IP Addresses example of the hosts file 
+      - Below is the Ex 2 section where the IP Addresses are added to the hosts file 
     
-![]hostfileex2.PNG
+![](Images/Hostfileex2.PNG)
 	
 
 - This is the default ansible 'hosts' file.
 
-   -It should live in /etc/ansible/hosts
+   - It should live in /etc/ansible/hosts
 
    - Under Ex 2 section update the hosts belonging to the 'webservers' group
    	- Configuration in this example add 3 web server IP addresses
-	- Use the link below for the ELKplaybook.yml
- https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
+	- Use the link below for the hosts file.MD
+	
+https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD
 ![](Images/hostfilescreenshot.PNG)
 
 # Launching and Exposing the Container ###
@@ -171,21 +172,21 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
   * Change directories to cd /etc/ansible
   * Create the ELKplaybook.yml using nano
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
-    - ELKplaybook.yml file noted below l
 
-ELKplaybook.yml
+ELKplaybook.yml is displayed below along with the link the the yml file
 
 ![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
 ![](Images/ELKplaybook.yml.PNG)
 
 
   -The Ansible output should resemble the output below and not contain any errors:
+  
   -root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
 
 ![](Images/ELKplaybookoutput.PNG)
 
-After the ELK container is installed SSH to the container to verify the ELK container is running.
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+After the ELK container is installed SSH to the container to verify the ELK container is running.  The following screenshot 
+displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 RedFive@ELK-SERVER:~$ sudo docker ps
 
