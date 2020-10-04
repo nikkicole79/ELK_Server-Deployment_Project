@@ -149,16 +149,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
       - Add the new VM to the Ansible hosts file 
       - Update the IP addresses under Example #2. 
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
-      
-	   - 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
-	   - 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
-           - 10.0.0.8 ansible_python_interpreter=/usr/bin/python3
+    
+![]hostfileex2.PNG
 	
-
-https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
-
-![]hosts_file.MD
-
 
 - This is the default ansible 'hosts' file.
 
@@ -166,7 +159,8 @@ https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/E
 
    - Under Ex 2 section update the hosts belonging to the 'webservers' group
    	- Configuration in this example add 3 web server IP addresses
- 
+	- Use the link below for the ELKplaybook.yml
+ https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
 ![](Images/hostfilescreenshot.PNG)
 
 # Launching and Exposing the Container ###
