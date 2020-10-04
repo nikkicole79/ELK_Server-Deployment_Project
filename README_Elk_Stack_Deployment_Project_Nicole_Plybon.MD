@@ -11,7 +11,9 @@ This document contains the following details:
     -Updating the HOst File with the VM IP Addresses
   - Launching and Exposing the Container
   - Identity and Access Management
-  - Beats in Use
+  - Beats in Use   
+    - Install Filebeat on the DVWA Virtual Machine
+    - Install Metricbeat on the DVWA Virtual Machine
   - Machines Being Monitored
 - Target Machines & Beats
 
@@ -355,16 +357,21 @@ SSH into the control node and follow the steps below:
 The easiest way to copy the playbooks is to use Git:
 
 root@6160a9be360e: cd /etc/ansible
+
 root@6160a9be360e: mkdir files
+
 - Clone Repository + IaC Files
 - git clone https://github.com/yourusername/project-1.git
 - Move Playbooks and hosts file Into `/etc/ansible`
+
 root@6160a9be360e: cp project-1/playbooks/* .
+
 root@6160a9be360e: cp project-1/files/* ./files
 
 This copies the playbook files to the correct place.
 
 Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
+
 root@6160a9be360e: cd /etc/ansible
 
 root@6160a9be360: Cat > hosts <<EOF
@@ -379,13 +386,21 @@ root@6160a9be360: Cat > hosts <<EOF
 
 
 - After this, the commands below run the playbook:
+  
   root@6160a9be360: cd /etc/ansible
 
 - After this, the commands below run the playbook:
+  
   root@6160a9be360: cd /etc/ansible
+  
   root@6160a9be360: ansible-playbook install_elk.yml elk
+  
   root@6160a9be360: ansible-playbook install_filebeat.yml webservers
+  
   root@6160a9be360: ansible-playbook install_metricbeat.yml webservers
 
 -To verify success, wait five minutes to give ELK time to start up.
--Then, run: http:////[ELK VM IP]:5601/app/kibana. This is the address of Kibana. If the installation succeeded, this command should diplay the ELK Server
+
+-Then, run: http:////[ELK VM IP]:5601/app/kibana. 
+
+- This is the address of Kibana. If the installation succeeded, this command should diplay the ELK Server
