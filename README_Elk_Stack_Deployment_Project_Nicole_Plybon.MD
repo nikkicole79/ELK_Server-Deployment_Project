@@ -216,7 +216,9 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 Install Filebest on the DVWA Virtual Machine:
   - Open ELK server homepage
 	- Click on Add Log Data
-![]9Images/Addlogdatabutton.PNG)
+	
+![](Images/Addlogdatabutton.PNG)
+
 	- Choose System Logs
 	- Click on DEB tab under Getting Started to vew the correct Linux Filebeat installation instructions
         - Under the Download and install Filebeat section click the Copy snippet button to get the curl command
