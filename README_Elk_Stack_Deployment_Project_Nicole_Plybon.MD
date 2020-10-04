@@ -150,7 +150,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
       - Update the IP addresses under Example #2. 
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
     
-![]hostfileex2.PNG
+![](Images/Hostfileex2.PNG)
 	
 
 - This is the default ansible 'hosts' file.
