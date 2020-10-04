@@ -21,12 +21,14 @@ certain pieces of it, such as Filebeat.  Here is an example of the filebeat-play
 
 - Filebeat-Playbook.yml
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/ELK-Stack-Deployment-Project/filebeat-playbook.yml)
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
 
 
 # Description of the Topology ###
 
 ![](Images/ELK_Stack_Deployment_Diagram_Project.PNG)
+
+Below is the google drive link as well to the ELK Stack Deployment Diagram 
 ![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
@@ -34,15 +36,20 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.  
 The load balancer sites between the client and the server and provides additional security, performance, resilience and simply scaling of 
 the network.
-	1. Security -    Adding additional layers of security
-		          *Protect applications from emerging threats
-		          *Authenticate User Access
-		          *Protect again DDoS attacks by detecting and dropping DDoS traffic
-		          *Simplify PCI compiance
-	2. Performance - Load balancers reduce the load on the web sever and optimize the traffic resulting in more resources for the application
-	3. Resilience -  Load balancers maintain continue service if a web service fails or is busy will continue to provide or redirect traffic to 
+
+
+	- Security - Adding additional layers of security
+	            - Protect applications from emerging threats
+		    - Authenticate User Access
+		    - Protect again DDoS attacks by detecting and dropping DDoS traffic
+		    - Simplify PCI compiance
+		    
+	- Performance - Load balancers reduce the load on the web sever and optimize the traffic resulting in more resources for the application
+	
+	- Resilience -  Load balancers maintain continue service if a web service fails or is busy will continue to provide or redirect traffic to 
 		         the remaining servers with no impact to the user
-	4. Scalability - Easy to makes changes to the server infrastructure without disrupting existing service to users 
+			 
+	- Scalability - Easy to makes changes to the server infrastructure without disrupting existing service to users 
  
 
 The advantage of the JumpBox is it prevents the additional VM's from being exposed to the public.  The JumpBox is the single virutal machine that 
@@ -58,10 +65,11 @@ specific pieces you are interested in.  Filebeat and Metricbeat were used in the
 - Metricbeat collects specific machine metrics in the network, such as CPU usage and uptime.  
 
 	- A metric is simply a measurement about an aspect of a system that tells analysts how "healthy" it is. Common metrics include:
+	
 		- CPU usage: The heavier the load on a machine's CPU, the more likely it is to fail. Analysts often receive alerts when CPU usage gets 
                   too high.
-                - Uptime: Uptime is a measure of how long a machine has been on. Servers are generally expected to be available for a certain percentage 
-                  of the so analysts typically track uptime to ensure their deployments meet service-level agreements (SLA 
+		  
+                - Uptime: Uptime is a measure of how long a machine has been on. Servers are generally expected to be available for a certain                           percentage of the so analysts typically track uptime to ensure their deployments meet service-level agreements (SLA 
 
 The configuration details of each machine may be found below.
 
@@ -73,8 +81,7 @@ The configuration details of each machine may be found below.
 | DVWA3    |Web Server|  10.0.0.7  |      Linux       |
 |  ELK     |Monitoring|  10.1.0.4  |      Linux       |
 
-In addition to the confgiruation above, Azure has provisioned a load balancer in front of the 3 Web Server Virtual Machines except for the jump box.  The
-load balance is configured into the following zones:
+In addition to the confgiruation above, Azure has provisioned a load balancer in front of the 3 Web Server Virtual Machines except for the jump box.  The load balance is configured into the following zones:
 
 * Zone 1: DVWA 1, DVWA 2, and DVWA3
 * Zone 2: ELK
@@ -102,27 +109,24 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous due to the following:
 
-   *One-click: Run from the command line to run the script once and everything is setup. Such as making sure a service is running, trigger updates or reboots 
+   - One-click: Run from the command line to run the script once and everything is setup. Such as making sure a service is running, trigger updates or      reboots 
 
-   *Modular: Only one program per script, this way I can spread the programs across different servers.
+   - Modular: Only one program per script, this way I can spread the programs across different servers.
 
-   *Simple:Scripts are extremely simple and don’t need any other software installed.
+   - Simple:Scripts are extremely simple and don’t need any other software installed.
 
-   *Agnostic: Most programmers can figure out shell and don’t need to know how to use a specific program.
+   - Agnostic: Most programmers can figure out shell and don’t need to know how to use a specific program.
 
-   *Versioning: Since my code is on GitHub a simple Git pull and restart all of supervisor will run my latest code.
+   - Versioning: Since my code is on GitHub a simple Git pull and restart all of supervisor will run my latest code.
 
-   *Agentless: Finally, Ansible is completely agentless. There are no agents/software or additional firewall ports that you need to install on the  
-    client systems or hosts which you want to automate.
+   - Agentless: Finally, Ansible is completely agentless. There are no agents/software or additional firewall ports that you need to install on the  
+     client systems or hosts which you want to automate.
 
-   *Powerful & Flexible: Ansible has powerful features that can enable you to model even the most complex IT workflows. It can manage the infrastructure, 
-    networks, operating systems and services that you are already using, as Ansible provides you with hundreds of modules to manage them.
+   - Powerful & Flexible: Ansible has powerful features that can enable you to model even the most complex IT workflows. It can manage the           infrastructure, networks, operating systems and services that you are already using, as Ansible provides you with hundreds of modules to manage them.
 
-   *Efficient: No extra software on your servers means more resources for your applications. Also, since Ansible modules work via JSON, Ansible is extensible 
-    with modules written in a programming language. Ansible introduces modules as basic building blocks for software and cab be customizable based on the needs.
+   - Efficient: No extra software on your servers means more resources for your applications. Also, since Ansible modules work via JSON, Ansible is    extensible with modules written in a programming language. Ansible introduces modules as basic building blocks for software and cab be customizable based on the needs.
 
-   *Automatic step-by-step reporting : Ansible encourages you to name each ‘task’ in your provisioning script, and then reports whether or not that task 
-    succeeded with-or-without changes, or failed, and any error messages. All colour coded.
+   - Automatic step-by-step reporting : Ansible encourages you to name each ‘task’ in your provisioning script, and then reports whether or not that task succeeded with-or-without changes, or failed, and any error messages. All colour coded.
 
 
 # Downloading and Configuring the Container ###
@@ -136,8 +140,6 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 # How to Use the Ansible Build ###
 
-Create an Ansible playbook that
-
   * sudo docker start [container]
   * sudo docker attach [container]
 	- After attaching the container the prompt will change to root
@@ -147,25 +149,19 @@ Create an Ansible playbook that
       - Add the new VM to the Ansible hosts file 
       - Update the IP addresses under Example #2. 
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
+    
+![]hostfileex2.PNG
+	
 
-![](Ansible/hosts_file.MD)
-Ansible/hosts_file.MD
+- This is the default ansible 'hosts' file.
 
+   -It should live in /etc/ansible/hosts
 
- This is the default ansible 'hosts' file.
-
- It should live in /etc/ansible/hosts
-
- Ex 2: A collection of hosts belonging to the 'webservers' group
- [webservers]
- alpha.example.org
- beta.example.org
- 192.168.1.100
- 192.168.1.110
- 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
- 10.0.0.8 ansible_python_interpreter=/usr/bin/python3
-
+   - Under Ex 2 section update the hosts belonging to the 'webservers' group
+   	- Configuration in this example add 3 web server IP addresses
+	- Use the link below for the ELKplaybook.yml
+ https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
+![](Images/hostfilescreenshot.PNG)
 
 # Launching and Exposing the Container ###
   * sudo docker start [container]
