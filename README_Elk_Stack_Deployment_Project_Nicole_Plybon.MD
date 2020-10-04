@@ -311,6 +311,11 @@ root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
 
   - Click the DEB tab under Getting Started for the correct Linux instructions.
   - Using curl is a better way to avoid errors and prevents corrupts configuration file
+  - Start Ansible container
+	- SSH into the Ansible Container
+  - Click the Copy snippet under the Download and install Metricbeat for the curl command
+        - Using curl is a better way to avoid errors and prevents corrupts configuration file 
+  
 
   
  ![](Images/metricbeatsnippet.PNG)
