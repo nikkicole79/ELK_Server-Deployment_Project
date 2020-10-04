@@ -219,23 +219,24 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 	
 ![](Images/Addlogdatabutton.PNG)
 
-	- Choose System Logs
-	
-![](Images/Systemlogs.png)
+		
+  - Choose System Logs
 
-	- Click on DEB tab under Getting Started to vew the correct Linux Filebeat installation instructions
-        - Under the Download and install Filebeat section click the Copy snippet button to get the curl command
+![](Images/Systemlogs.png)
 	
+- Click on Deb tab under Getting Started to view the correct Linux Filebeat installation instructions
+
+- Under the Download and install filebeat section click the Copy snippet button to ge the curl command
+
 ![](Images/Copysnippet.PNG)
 
-  - Create the Filebest Configuration File with the correct setting to work with the ELK server
+  - Create the Filebeat Configuration File with the correct setting to work with the ELK server
  
 	- Start Ansible container
 	- SSH into the Ansible Container
         - Using curl is a better way to avoid errors and prevents corrupts configuration file
 
 root@6160a9be360e:/etc/ansible# curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
-sudo dpkg -i filebeat-7.6.1-amd64.deb
 
 ![](Images/curl.PNG)
 
