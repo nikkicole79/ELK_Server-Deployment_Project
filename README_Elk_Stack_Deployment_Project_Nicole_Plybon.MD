@@ -220,8 +220,13 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 ![](Images/Addlogdatabutton.PNG)
 
 	- Choose System Logs
+	
+![](Images/Systemlogs.png)
+
 	- Click on DEB tab under Getting Started to vew the correct Linux Filebeat installation instructions
         - Under the Download and install Filebeat section click the Copy snippet button to get the curl command
+	
+![](Images/Copysnippet.PNG)
 
   - Create the Filebest Configuration File with the correct setting to work with the ELK server
  
@@ -276,7 +281,33 @@ root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
 
 ![](Images/Kibana_Check_Data_logs.PNG)
 
-##
+## Install Metricbeat on the DVWA Virtual 
+
+  - Click Add Metric Data
+ 
+![](Images/KibanaWebpage.PNG)
+
+  - Click Docker Metrics.
+  
+![](Images/Dockermetrics.PNG)
+
+  - Click the DEB tab under Getting Started for the correct Linux instructions.
+  - Using curl is a better way to avoid errors and prevents corrupts configuration file
+
+  
+ ![](Images/metricbeatsnippet.PNG)
+ 
+ root@6160a9be360e:/etc/ansible# curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+
+ ![](Images/metricbeatcurlanddpkg.PNG)
+
+To verify that your play works as expected, on the Metricbeat installation page in the ELK server GUI, scroll to Step 5: Module Status and click check data
+
+![](Images/metricbeatcheckdatadashboard.png)
+
+The Dashboard should return data as displayed below
+
+![](Images/Kibanadashboard.png)
 
 ### Target Machines & Beats ###
 This ELK server is configured to monitor the following machines: 10.0.0.5, 10.0.0.6, and 10.0.0.8
