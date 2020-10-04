@@ -159,8 +159,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
    - Under Ex 2 section update the hosts belonging to the 'webservers' group
    	- Configuration in this example add 3 web server IP addresses
-	- Use the link below for the ELKplaybook.yml
- https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
+	- Use the link below for the hosts file.MD
+	
+https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD
 ![](Images/hostfilescreenshot.PNG)
 
 # Launching and Exposing the Container ###
