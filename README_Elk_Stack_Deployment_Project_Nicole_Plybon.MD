@@ -21,7 +21,7 @@ certain pieces of it, such as Filebeat.  Here is an example of the filebeat-play
 
 - Filebeat-Playbook.yml
 
-![](Documents/GitHub/ELK_Server-Deployment-Project/ELK-Stack-Deployment-Project/filebeat-playbook.yml)
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
 
 
 # Description of the Topology ###
