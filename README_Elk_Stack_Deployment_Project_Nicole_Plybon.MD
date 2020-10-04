@@ -213,7 +213,7 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 
 # Beats in Use ###
 
-Install Filebest on the DVWA Virtual Machine:
+##Install Filebeat on the DVWA Virtual Machine:
   - Open ELK server homepage
 	- Click on Add Log Data
 	
@@ -276,7 +276,7 @@ root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
 
 ![](Images/Kibana_Check_Data_logs.PNG)
 
-
+##
 
 ### Target Machines & Beats ###
 This ELK server is configured to monitor the following machines: 10.0.0.5, 10.0.0.6, and 10.0.0.8
