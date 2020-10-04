@@ -250,15 +250,15 @@ root@b2ba789660ad:/etc/ansible# nano filebeat-config.yml
 ![](Images/kibanafilebeatconfig.PNG)
 
 Create the Filebeat Installation Playbook.  The playbook implements the following tasks:
-  -Download the .deb file from artifacts.elastic.co.
-  -Install the .deb file using the dpkg command shown below: 
-     -dpkg -i filebeat-7.4.0-amd64.deb
-  -Copy the Filebeat configuration file from your Ansible container to your WebVM's where you just installed Filebeat. 
-     -You can use the Ansible module copy to copy the entire configuration file into the correct place.
-     -You will need to place the configuration file in a directory called files in your Ansible directory.
-  -Run the Filebeat modules enable system command.
-  -Run the Filebeat setup command.
-  -Run the Filebeat start command.
+  - Download the .deb file from artifacts.elastic.co.
+  - Install the .deb file using the dpkg command shown below: 
+     - dpkg -i filebeat-7.4.0-amd64.deb
+  - Copy the Filebeat configuration file from your Ansible container to your WebVM's where you just installed Filebeat. 
+     - You can use the Ansible module copy to copy the entire configuration file into the correct place.
+     - You will need to place the configuration file in a directory called files in your Ansible directory.
+  - Run the Filebeat modules enable system command.
+  - Run the Filebeat setup command.
+  - Run the Filebeat start command.
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-playbook.yml
 
@@ -275,6 +275,9 @@ root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
 ![](Images/ansibleplaybookoutput.PNG)
 
 - Click the Log Data button 
+
+![](Images/KibanaWebpage.PNG)
+
 - Click on the system logs
 - Under Module Status section and Click Check Data
 - Scroll to the bottom and click on Verify Incoming Data
