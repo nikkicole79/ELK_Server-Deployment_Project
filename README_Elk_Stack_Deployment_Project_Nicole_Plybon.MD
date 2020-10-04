@@ -163,7 +163,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
    - Under Ex 2 section update the hosts belonging to the 'webservers' group
    	- Configuration in this example add 3 web server IP addresses
-	- Use the link below for the hosts file.MD
+	- Use the link below for the hosts file.MD where the VM IP addresses to added
 	
 https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD
 ![](Images/hostfilescreenshot.PNG)
@@ -223,6 +223,7 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 	
 ![](Images/Addlogdatabutton.PNG)
 
+
 		
 		
 		
@@ -247,6 +248,8 @@ root@6160a9be360e:/etc/ansible# curl -L -O https://artifacts.elastic.co/download
 ![](Images/curl.PNG)
 
   - Once the file is on the ansible container, edit the host IP under the Elasticsearch output and Kibana
+  - Elasticsearch output: setup was updated to 10.1.0.4:9200 
+  - Kibana: setup was updated to 10.1.0.4:5601
 
 ![](Ansible/filebeat-configuration.yml)
 
@@ -265,14 +268,18 @@ Create the Filebeat Installation Playbook.  The playbook implements the followin
   - Run the Filebeat modules enable system command.
   - Run the Filebeat setup command.
   - Run the Filebeat start command.
+  
 
 root@b2ba789660ad:/etc/ansible# nano filebeat-playbook.yml
 
 - Filebeat-Playbook.yml
 
-![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
+Once the host IP address has been updated into the filebeat-config.yml file run the Ansible Playbook
 
-  - Once the host IP address has been updated into the filebeat-config.yml file run the Ansible Playbook
+root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
+
+
+![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
 
 ![](Documents/GitHub/ELK_Server-Deployment-Project/filebeat-configuration.yml)
 
@@ -285,11 +292,12 @@ root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
 ![](Images/KibanaWebpage.PNG)
 
 - Click on the system logs
-- Under Module Status section and Click Check Data
-- Scroll to the bottom and click on Verify Incoming Data
+- Under Module Status section and Click Check Data button
+  - The user should see Data Duccessfully recieved from this module
+- Scroll to the bottom and click the System logs dashboard button to Verify Incoming Data
 - If the ELK Stack was successful you will see the recieving logs
 
-![](Images/Kibana_Check_Data_logs.PNG)
+![](Images/Kibanacheckdataanddashboardbutton.PNG)
 
 ## Install Metricbeat on the DVWA Virtual 
 
