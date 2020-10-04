@@ -173,20 +173,21 @@ https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/h
   * Create the ELKplaybook.yml using nano
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
 
-ELKplaybook.yml is displayed below along with the link the the yml file
+ELKplaybook.yml is displayed below along with the link to the yml file
 
 ![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
 ![](Images/ELKplaybook.yml.PNG)
 
 
-  -The Ansible output should resemble the output below and not contain any errors:
+The Ansible output should resemble the output below and not contain any errors:
   
-  -root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
+root@b2ba789660ad:/etc/ansible# ansible-playbook ELKplaybook.yml
 
 ![](Images/ELKplaybookoutput.PNG)
 
-After the ELK container is installed SSH to the container to verify the ELK container is running.  The following screenshot 
-displays the result of running `docker ps` after successfully configuring the ELK instance.
+After the ELK container is installed SSH to the container to verify the ELK container is running.  
+
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 RedFive@ELK-SERVER:~$ sudo docker ps
 
@@ -201,7 +202,7 @@ After verify the ELK container is running you should be able to connect to the w
 
   - Load the ELK stack server from the browser at http://[your.VM.IP]:5601/app/kibana
 
-In the event you do not see the Kibana / ELK server landing page ensure to SSH into the ELK sever to start and verify it's running.
+  - In the event you do not see the Kibana / ELK server landing page ensure to SSH into the ELK sever to start and verify it's running.
 
 RedFive@ELK-SERVER:~$ sudo docker container list -a
 
@@ -215,12 +216,14 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 Install Filebest on the DVWA Virtual Machine:
   - Open ELK server homepage
 	- Click on Add Log Data
+![]9Images/Addlogdatabutton.PNG)
 	- Choose System Logs
 	- Click on DEB tab under Getting Started to vew the correct Linux Filebeat installation instructions
         - Under the Download and install Filebeat section click the Copy snippet button to get the curl command
 
   - Create the Filebest Configuration File with the correct setting to work with the ELK server
-        - Start Ansible container
+ 
+	- Start Ansible container
 	- SSH into the Ansible Container
         - Using curl is a better way to avoid errors and prevents corrupts configuration file
 
