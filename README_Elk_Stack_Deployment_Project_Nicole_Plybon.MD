@@ -36,14 +36,19 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.  
 The load balancer sites between the client and the server and provides additional security, performance, resilience and simply scaling of 
 the network.
+
+
 	- Security - Adding additional layers of security
 	            - Protect applications from emerging threats
 		    - Authenticate User Access
 		    - Protect again DDoS attacks by detecting and dropping DDoS traffic
 		    - Simplify PCI compiance
+		    
 	- Performance - Load balancers reduce the load on the web sever and optimize the traffic resulting in more resources for the application
+	
 	- Resilience -  Load balancers maintain continue service if a web service fails or is busy will continue to provide or redirect traffic to 
 		         the remaining servers with no impact to the user
+			 
 	- Scalability - Easy to makes changes to the server infrastructure without disrupting existing service to users 
  
 
