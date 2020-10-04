@@ -8,6 +8,7 @@ This document contains the following details:
 - ELK Configuration
   - Downloading and Configuring the Container
   - How to Use the Ansible Build
+    -Updating the HOst File with the VM IP Addresses
   - Launching and Exposing the Container
   - Identity and Access Management
   - Beats in Use
@@ -144,6 +145,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
   * sudo docker attach [container]
 	- After attaching the container the prompt will change to root
   * root@b2ba789660ad:
+  
+  # Updating the Host File with the VM IP Addresses
+  
   * Change directories to cd /etc/ansible and update the hosts file
   * root@b2ba789660ad:/etc/ansible# nano hosts
       - Add the new VM to the Ansible hosts file 
@@ -219,6 +223,8 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 	
 ![](Images/Addlogdatabutton.PNG)
 
+		
+		
 		
   - Choose System Logs
 
