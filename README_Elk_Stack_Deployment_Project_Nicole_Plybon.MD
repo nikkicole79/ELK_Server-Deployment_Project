@@ -198,9 +198,9 @@ RedFive@ELK-SERVER:~$ sudo docker ps
 
 After verify the ELK container is running you should be able to connect to the webpage.  This ELK web serve runs on port 5601 
 
-![](Images/KibanaWebpage.PNG)
+Load the ELK stack server from the browser at http://[your.VM.IP]:5601/app/kibana
 
-  - Load the ELK stack server from the browser at http://[your.VM.IP]:5601/app/kibana
+![](Images/KibanaWebpage.PNG)
 
   - In the event you do not see the Kibana / ELK server landing page ensure to SSH into the ELK sever to start and verify it's running.
 
