@@ -217,7 +217,7 @@ RedFive@ELK-SERVER:~$ sudo docker start elk
 
 # Beats in Use ###
 
-##Install Filebeat on the DVWA Virtual Machine:
+## Install Filebeat on the DVWA Virtual Machine:
   - Open ELK server homepage
 	- Click on Add Log Data
 	
@@ -353,17 +353,21 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to the appropriate targets to check that the installation worked as expected.
 
 The easiest way to copy the playbooks is to use Git:
-    $ cd /etc/ansible
-    $ mkdir files
-    # Clone Repository + IaC Files
-    $ git clone https://github.com/yourusername/project-1.git
-    # Move Playbooks and hosts file Into `/etc/ansible`
-    $ cp project-1/playbooks/* .
-    $ cp project-1/files/* ./files
-    This copies the playbook files to the correct place.
-    Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
-    $ cd /etc/ansible
-    $ cat > hosts <<EOF
+
+root@6160a9be360e: cd /etc/ansible
+root@6160a9be360e: mkdir files
+- Clone Repository + IaC Files
+- git clone https://github.com/yourusername/project-1.git
+- Move Playbooks and hosts file Into `/etc/ansible`
+root@6160a9be360e: cp project-1/playbooks/* .
+root@6160a9be360e: cp project-1/files/* ./files
+
+This copies the playbook files to the correct place.
+
+Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
+root@6160a9be360e: cd /etc/ansible
+
+root@6160a9be360: Cat > hosts <<EOF
     [webservers]
     10.0.0.5
     10.0.0.6
@@ -375,13 +379,13 @@ The easiest way to copy the playbooks is to use Git:
 
 
 - After this, the commands below run the playbook:
-  $ cd /etc/ansible
+  root@6160a9be360: cd /etc/ansible
 
 - After this, the commands below run the playbook:
-  $ cd /etc/ansible
-  $ ansible-playbook install_elk.yml elk
-  $ ansible-playbook install_filebeat.yml webservers
-  $ ansible-playbook install_metricbeat.yml webservers
+  root@6160a9be360: cd /etc/ansible
+  root@6160a9be360: ansible-playbook install_elk.yml elk
+  root@6160a9be360: ansible-playbook install_filebeat.yml webservers
+  root@6160a9be360: ansible-playbook install_metricbeat.yml webservers
 
 -To verify success, wait five minutes to give ELK time to start up.
--Then, run: curl http://[ELK VM IP]:5601. This is the address of Kibana. If the installation succeeded, this command should print HTML to the consol
+-Then, run: http:////[ELK VM IP]:5601/app/kibana. This is the address of Kibana. If the installation succeeded, this command should diplay the ELK Server
