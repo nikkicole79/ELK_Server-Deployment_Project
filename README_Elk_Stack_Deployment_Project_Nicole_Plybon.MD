@@ -150,9 +150,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
       - Update the IP addresses under Example #2. 
       - Below is the Ex 2 section where the IP Addresses example of the hosts file 
       
-	- 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
-	- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
-        - 10.0.0.8 ansible_python_interpreter=/usr/bin/python3
+	   - 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+	   - 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+           - 10.0.0.8 ansible_python_interpreter=/usr/bin/python3
 	
 
 https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
