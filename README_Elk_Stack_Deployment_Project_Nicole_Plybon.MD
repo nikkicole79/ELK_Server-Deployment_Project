@@ -84,7 +84,7 @@ The configuration details of each machine may be found below.
 | DVWA3    |Web Server|  10.0.0.7  |      Linux       |
 |  ELK     |Monitoring|  10.1.0.4  |      Linux       |
 
-In addition to the confgiruation above, Azure has provisioned a load balancer in front of the 3 Web Server Virtual Machines except for the jump box.  The load balance is configured into the following zones:
+In addition to the confgiruation above, Azure has provisioned a load balancer in front of the 3 Web Server Virtual Machines except for the jump box.  The load balancer is configured into the following zones:
 
 * Zone 1: DVWA 1, DVWA 2, and DVWA3
 * Zone 2: ELK
