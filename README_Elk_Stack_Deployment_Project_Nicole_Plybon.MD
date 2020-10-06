@@ -356,51 +356,22 @@ SSH into the control node and follow the steps below:
 
 The easiest way to copy the playbooks is to use Git:
 
-root@6160a9be360e: cd /etc/ansible
-
-root@6160a9be360e: mkdir files
-
-- Clone Repository + IaC Files
-- git clone https://github.com/yourusername/project-1.git
-- Move Playbooks and hosts file Into `/etc/ansible`
-
-root@6160a9be360e: cp project-1/playbooks/* .
-
-root@6160a9be360e: cp project-1/files/* ./files
+![](Images/Gitcommands.PNG)
 
 This copies the playbook files to the correct place.
 
 Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
 
-root@6160a9be360e: cd /etc/ansible
-
-root@6160a9be360: Cat > hosts <<EOF
-    [webservers]
-    10.0.0.5
-    10.0.0.6
-    10.0.0.8
-
-    [elk]
-    10.1.0.4
-    EOF
+![](Images/hosts_end.PNG)
 
 
-- After this, the commands below run the playbook:
-  
-  root@6160a9be360: cd /etc/ansible
+- After this, the commands to install filebeat and metricbeat below:
 
-- After this, the commands below run the playbook:
-  
-  root@6160a9be360: cd /etc/ansible
-  
-  root@6160a9be360: ansible-playbook install_elk.yml elk
-  
-  root@6160a9be360: ansible-playbook install_filebeat.yml webservers
-  
-  root@6160a9be360: ansible-playbook install_metricbeat.yml webservers
-
+![](Images/playbook.PNG)
+ 
 -To verify success, wait five minutes to give ELK time to start up.
 
 -Then, run: http:////[ELK VM IP]:5601/app/kibana. 
 
 - This is the address of Kibana. If the installation succeeded, this command should diplay the ELK Server
+
