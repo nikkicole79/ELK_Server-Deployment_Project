@@ -8,7 +8,7 @@ This document contains the following details:
 - ELK Configuration
   - Downloading and Configuring the Container
   - How to Use the Ansible Build
-    -Updating the HOst File with the VM IP Addresses
+    -Updating the Host File with the VM IP Addresses
   - Launching and Exposing the Container
   - Identity and Access Management
   - Beats in Use   
