@@ -31,7 +31,7 @@ certain pieces of it, such as Filebeat.  Here is an example of the filebeat-play
 ![](Images/ELK_Stack_Deployment_Diagram_Project.PNG)
 
 Below is the google drive link as well to the ELK Stack Deployment Diagram 
-![]https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing
+- [ELK Stack Deployment Diagram](https://drive.google.com/drive/folders/1qabkFzc6OKWVc4VX9JYaLMf2bmkCaK8v?usp=sharing)
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
