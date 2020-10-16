@@ -68,11 +68,10 @@ specific pieces you are interested in.  Filebeat and Metricbeat were used in the
 
 	- A metric is simply a measurement about an aspect of a system that tells analysts how "healthy" it is. Common metrics include:
 	
-		- CPU usage: The heavier the load on a machine's CPU, the more likely it is to fail. Analysts often receive alerts when CPU usage gets 
-                  too high.
-		  
-                - Uptime: Uptime is a measure of how long a machine has been on. 
-		- Servers are generally expected to be available for a certain percentage of the so analysts typically track uptime to ensure their deployments 
+	       - CPU usage: The heavier the load on a machine's CPU, the more likely it is to fail. Analysts often receive alerts when CPU usage gets 
+                 too high.
+	       - Uptime: Uptime is a measure of how long a machine has been on. 
+	       - Servers are generally expected to be available for a certain percentage of the so analysts typically track uptime to ensure their deployments 
 		 meet service-level agreements (SLA 
 
 The configuration details of each machine may be found below.
