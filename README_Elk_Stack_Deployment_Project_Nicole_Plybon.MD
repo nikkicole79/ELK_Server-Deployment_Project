@@ -355,8 +355,9 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. We use the jump box for this purpose.
 
 SSH into the control node and follow the steps below:
-- Copy the .yml files to '/etc/ansible' directory 
-- Update the host file to include the tasks that need to be installed, downloaded, copied, or ran.
+- Copy the .yml files to '/etc/ansible' directory and ensure include tasks that need to be installed, downloaded, copied, or ran.  
+- Update the host file to include the the webserver IP address.
+- [Hosts_File.MD](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD)
 
 ``` 
    [webservers]
