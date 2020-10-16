@@ -355,24 +355,25 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. We use the jump box for this purpose.
 
 SSH into the control node and follow the steps below:
-- Copy the playbooks file to ansible control node (For example VI, Nano, etc)
-- Update the yml file to include the tasks that need to be installed, downloaded, copied, or ran.
-- Run the playbook, and navigate to the appropriate targets to check that the installation worked as expected.
+- Copy the .yml files to '/etc/ansible' directory 
+- Update the host file to include the tasks that need to be installed, downloaded, copied, or ran.
 
-The easiest way to copy the playbooks is to use Git:
+``` 
+   [webservers]
+    10.0.0.5
+    10.0.0.6
+    10.0.0.7
+   [elkservers]
+    10.1.0.4
 
-![](Images/Gitcommands.PNG)
+- Run the playbook, and install ELK, Filebeat and Metric beat commands:
 
-This copies the playbook files to the correct place.
-
-Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
-
-![](Images/hosts_end.PNG)
-
-
-- After this, the commands to install filebeat and metricbeat below:
-
-![](Images/playbook.PNG)
+```
+cd /etc/ansible
+ansible-playbook elk-playbook.yml
+ansible-playbook filebeat-playbook.yml
+ansible-playbook metricbeat-playbook.yml 
+```
  
 -To verify success, wait five minutes to give ELK time to start up.
 
