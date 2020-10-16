@@ -184,6 +184,8 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 ELKplaybook.yml is displayed below along with the link to the yml file
 
 - [ELK Playbook.yml](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml)
+
+
 ![](Images/ELKplaybook.yml.PNG)
 
 
@@ -283,7 +285,8 @@ Once the host IP address has been updated into the filebeat-config.yml file run 
 root@b2ba789660ad:/etc/ansible# ansible-playbook filebeat-playbook.yml
 
 
-![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
+- [Filebest Playbook.yml](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml)
+
 
 ![](Documents/GitHub/ELK_Server-Deployment-Project/filebeat-configuration.yml)
 
