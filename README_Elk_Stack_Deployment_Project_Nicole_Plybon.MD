@@ -168,6 +168,8 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 	- Use the link below for the hosts file.MD where the VM IP addresses to added
 	
 - [Hosts_File.MD](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD)
+
+
 ![](Images/hostfilescreenshot.PNG)
 
 # Launching and Exposing the Container ###
