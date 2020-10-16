@@ -22,7 +22,6 @@ These files have been tested and used to generate a live ELK deployment on Azure
 entire deployment pictured below. Alternatively, select portions of the Filebeat-Playbook.yml file may be used to install only 
 certain pieces of it, such as Filebeat.  Here is an example of the filebeat-playbook.yml used within this ELK Stack Deployement.
 
-- Filebeat-Playbook.yml
 
 - [Filebeat-Playbook.yml](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml)
 
@@ -167,7 +166,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
    	- Configuration in this example add 3 web server IP addresses
 	- Use the link below for the hosts file.MD where the VM IP addresses to added
 	
-https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD
+- [Hosts_File.MD](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD)
 ![](Images/hostfilescreenshot.PNG)
 
 # Launching and Exposing the Container ###
@@ -181,7 +180,7 @@ https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/h
 
 ELKplaybook.yml is displayed below along with the link to the yml file
 
-![]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml
+- [ELK Playbook.yml](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml)
 ![](Images/ELKplaybook.yml.PNG)
 
 
