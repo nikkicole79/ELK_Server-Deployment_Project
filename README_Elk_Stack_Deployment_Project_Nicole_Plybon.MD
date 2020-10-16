@@ -359,7 +359,7 @@ SSH into the control node and follow the steps below:
 
    - [Filebeat-Playbook.yml](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml)
    - [ELK Playbook.yml](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/ELKplaybook.yml)
-   - [Metricbeat] - curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+   - [Metricbeat] - root@6160a9be360e:/etc/ansible# curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
    
 - Update the host file to include the the webserver IP address.
 - [Hosts_File.MD](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/hosts_file.MD)
