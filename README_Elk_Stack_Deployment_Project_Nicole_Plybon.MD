@@ -24,7 +24,7 @@ certain pieces of it, such as Filebeat.  Here is an example of the filebeat-play
 
 - Filebeat-Playbook.yml
 
-- [Filebeat-Playbook.yml]https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml
+- [Filebeat-Playbook.yml](https://github.com/nikkicole79/ELK_Server-Deployment_Project/blob/main/Ansible/Filebeat-Playbook.yml)
 
 
 # Description of the Topology ###
