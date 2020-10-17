@@ -372,22 +372,24 @@ SSH into the control node and follow the steps below:
    [elkservers]
     10.1.0.4
 
-- Run the playbook, and install ELK, Filebeat and Metric beat commands:
+
+ - Run the playbook, and install ELK, Filebeat and Metric beat commands:
+
 
 ```
-cd /etc/ansible
+ cd /etc/ansible
 
-ansible-playbook elk-playbook.yml
+ ansible-playbook elk-playbook.yml
 
-ansible-playbook filebeat-playbook.yml
+ ansible-playbook filebeat-playbook.yml
 
-ansible-playbook metricbeat-playbook.yml 
+ ansible-playbook metricbeat-playbook.yml 
 
-```
- 
+``` 
+
 -To verify success, wait five minutes to give ELK time to start up.
 
--Then, run: http:////[ELK VM IP]:5601/app/kibana. 
+-Then, run: `http:////[ELK VM IP]:5601/app/kibana` 
 
 - This is the address of Kibana. If the installation succeeded, this command should diplay the ELK Server
 
