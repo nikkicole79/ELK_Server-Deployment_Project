@@ -374,8 +374,6 @@ SSH into the control node and follow the steps below:
 
 
  - Run the playbook, and install ELK, Filebeat and Metric beat commands:
-
-
 ```
      cd /etc/ansible
      ansible-playbook elk-playbook.yml
