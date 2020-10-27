@@ -1,5 +1,9 @@
 # Automated ELK Stack Deployment
 
+The purpose of the ELK Stack gives you the ability to aggregate logs from all your systems and applications, analyze these 
+logs, and create visualizations for application and infrastructure monitoring, faster troubleshooting, security analytics, 
+and more.
+
 The files in this repository were used to configure the network depicted below.
 
 This document contains the following details:
