@@ -180,6 +180,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
   * Change directories to cd /etc/ansible
   * Create the ELKplaybook.yml using nano
   * root@b2ba789660ad:/etc/ansible# nano ELKplaybook.yml
+  	- Ensure to update the remote_user: to the user name you used
 
 ELKplaybook.yml is displayed below along with the link to the yml file
 
